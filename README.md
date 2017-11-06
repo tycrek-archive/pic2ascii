@@ -1,1 +1,1 @@
-"@ pic2ascii" 
+# pic2ascii
