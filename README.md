@@ -7,13 +7,16 @@ It takes an existing image and replaces all the pixels to ASCII characters.
 ## How do I run it?
 1. Run `java -jar pic2ascii.jar <filename>` in your terminal, replacing `<filename>` with the actual name of your file.
 2. When prompted, enter a scale value (higher value = smaller result).
-3. When prompted, enter a character to represnt pixels
+3. When prompted, enter a character to represent pixels
 
 ## Can I use it as a library?
 Yes! Import it into your project, then add one of these lines of code:
 >`BufferedImage image1 = new P2A().getImage(String filename, String character, int scale);`
+
 >`BufferedImage image2 = new P2A().getImage(File file, String character, int scale);`
+
 >`BufferedImage image3 = new P2A().getImage(BufferedImage image, String character, int scale);`
+
 Any of those will return a BufferedImage object.
 
 ## Known problems:
