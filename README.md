@@ -9,6 +9,13 @@ It takes an existing image and replaces all the pixels to ASCII characters.
 2. When prompted, enter a scale value (higher value = smaller result).
 3. When prompted, enter a character to represent pixels
 
+## Examples
+The first image is the original image (a mammoth). The second image is a converted image with a scale of 3 and using the M character. If you zoom in on the second image, you can see all the M's that make up the image.
+
+<img src="http://roastytoasty.mooo.com/pic2ascii/mammoth.jpg" width=500>
+
+<img src="http://roastytoasty.mooo.com/pic2ascii/mammoth.jpg_ASCII_M_0.jpg" width=500>
+
 ## Can I use it as a library?
 Yes! Import it into your project, then add one of these lines of code:
 >`BufferedImage image1 = new P2A().getImage(String filename, String character, int scale);`
