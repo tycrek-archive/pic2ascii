@@ -520,43 +520,12 @@ public class P2A {
         
         for(int x = 0; x < width; x++) { //For each X...
             for(int y = 0; y < height; y++) { //... and Y
-                if(ascii[x][y].contains(ANSI_RED)) { //RED
-                    int[][] col = Letters.getArray(array, Color.RED.getRGB(), Color.BLACK.getRGB()); //Get a colored character array
-                    for(int a = 0; a < Letters.width; a++) { //For each X in the new colored array...
-                        for(int b = 0; b < Letters.height; b++) { ///and each Y in the new colored array
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]); //Set a specific range of values with the new colors
-                        }
-                    }
-                } else if(ascii[x][y].contains(ANSI_BLACK)) { //BLACK
-                    int[][] col = Letters.getArray(array, Color.BLACK.getRGB(), Color.BLACK.getRGB());
-                    for(int a = 0; a < Letters.width; a++) {
-                        for(int b = 0; b < Letters.height; b++) {
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]);
-                        }
-                    }
-                } else if(ascii[x][y].contains(ANSI_BLUE)) { //BLUE
-                    int[][] col = Letters.getArray(array, Color.BLUE.getRGB(), Color.BLACK.getRGB());
-                    for(int a = 0; a < Letters.width; a++) {
-                        for(int b = 0; b < Letters.height; b++) {
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]);
-                        }
-                    }
-                } else if(ascii[x][y].contains(ANSI_GREEN)) { //GREEN
-                    int[][] col = Letters.getArray(array, Color.GREEN.getRGB(), Color.BLACK.getRGB());
-                    for(int a = 0; a < Letters.width; a++) {
-                        for(int b = 0; b < Letters.height; b++) {
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]);
-                        }
-                    }
-                } else if(ascii[x][y].contains(ANSI_WHITE)) { //WHITE
-                    int[][] col = Letters.getArray(array, Color.WHITE.getRGB(), Color.BLACK.getRGB());
-                    for(int a = 0; a < Letters.width; a++) {
-                        for(int b = 0; b < Letters.height; b++) {
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]);
-                        }
+                int[][] col = Letters.getArray(array, scaled[x][y].getRGB(), Color.OPAQUE);
+                for(int a = 0; a < Letters.width; a++) {
+                    for(int b = 0; b < Letters.height; b++) {
+                        saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]);
                     }
                 }
-
                 progress++; //Increase the progress
             }
             double fp = (progress / total) * 100; //Actual percentage
