@@ -1,0 +1,59 @@
+Desktop (1.8GHz Quad-core 8-thread Intel i5-8250U, 8GB RAM)
+
+Test image: outside4.jpg (16 megapixels)
+Test scale: 1
+Test letter: X
+
+Single Thread:
+0:0:0:58
+0:0:0:53
+0:0:0:56
+
+Multi Thread
+2 Threads: 0:0:1:31
+4 Threads: 0:0:1:35
+8 Threads: 0:0:1:37
+
+------------------------------------------------------------------------------
+Mobile (2.15GHz Quad-core Snapdragon 820, 4GB RAM)
+
+Test image: room6.jpg (8 megapixels)
+Test scale: 4
+Test letter: X
+
+Single Thread:
+0:0:1:46
+0:0:2:08
+
+Multi:
+4 Threads: 0:0:0:52
+4 Threads: 0:0:0:50
+------------------------------------------------------------------------------
+Analysis
+
+On the desktop system, the fastest single threaded time was 53 seconds. The
+fastest multi threaded time was 1 minute and 31 seconds. So for desktop,
+single threaded is the faster method.
+
+However, it was the opposite on the mobile system. The fastest single threaded
+time was 1 minute and 46 seconds, and the fastest multi threaded time was 50
+seconds.
+
+To be clear, the desktop converting an entire 16 megapixel image. The mobile
+was converting a 4x scaled 8 megapixel image.
+
+The desktop processor has a stock speed of 1.6GHz, and a max of 1.8 across all
+cores. However, a single core can "turbo" towards 3.34GHz if other cores are
+not in use. If all cores are in use (in the case of multi threading), then the
+cores are clocked somewhere in between 1.6 and 1.8GHZ. Combined with the
+overhead of multithreading, this makes sense that single threading is faster
+since this is a task where clock speed matters more than core count.
+
+The mobile processor has a stock speed of 2.15GHz, and it can stay there across
+all cores at any given time. In this way, the multi thread is faster than the
+single thread; Single thread is 1 core at 2.15GHz, but multi thread is 4 cores
+at 2.15GHz. The desktop was different in that it had 1 core at 3.34GHz, and 8
+cores at ~1.7GHz.
+
+In conclusion, multi threading is only worth using if the system can ensure
+a high clock speed across all cores.

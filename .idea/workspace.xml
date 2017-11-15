@@ -7,6 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2895787-bc72-43ff-857f-848c72067942" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/pic2ascii_jar/pic2ascii.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pic2ascii/com/jmoore/pic2ascii/P2A$Timer.class" afterPath="$PROJECT_DIR$/out/production/pic2ascii/com/jmoore/pic2ascii/P2A$Timer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/pic2ascii/com/jmoore/pic2ascii/P2A.class" afterPath="$PROJECT_DIR$/out/production/pic2ascii/com/jmoore/pic2ascii/P2A.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pic2ascii.jar" afterPath="$PROJECT_DIR$/pic2ascii.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/pic2ascii_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/pic2ascii_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java" afterPath="$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,14 +28,10 @@
       <file leaf-file-name="P2A.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="534" column="50" lean-forward="true" selection-start-line="534" selection-start-column="50" selection-end-line="534" selection-end-column="50" />
+            <state relative-caret-position="480">
+              <caret line="473" column="17" lean-forward="false" selection-start-line="473" selection-start-column="17" selection-end-line="473" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1629#1656#0" expanded="true" />
-                <element signature="e#2242#2269#0" expanded="true" />
-                <element signature="e#2829#2856#0" expanded="true" />
-                <element signature="e#8182#8209#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -38,8 +40,8 @@
       <file leaf-file-name="Letters.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+            <state relative-caret-position="7420">
+              <caret line="371" column="70" lean-forward="false" selection-start-line="371" selection-start-column="70" selection-end-line="371" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -73,15 +75,14 @@
       <find>semicolon</find>
       <find>a[</find>
       <find>())</find>
+      <find>of 6</find>
+      <find>42</find>
+      <find>64</find>
+      <find>red</find>
+      <find>85</find>
+      <find>Bitmap</find>
     </findStrings>
     <replaceStrings>
-      <replace>x[</replace>
-      <replace>y[</replace>
-      <replace>z[</replace>
-      <replace>num_0[</replace>
-      <replace>num_1[</replace>
-      <replace>num_2[</replace>
-      <replace>num_3[</replace>
       <replace>num_4[</replace>
       <replace>num_5[</replace>
       <replace>num_6[</replace>
@@ -105,6 +106,13 @@
       <replace>pipe[</replace>
       <replace>tilda[</replace>
       <replace>(), Color.BLACK.getRGB());</replace>
+      <replace>5 of 5</replace>
+      <replace>of 5</replace>
+      <replace>64</replace>
+      <replace>(scaled[x][y].getRed() / 2)</replace>
+      <replace>green</replace>
+      <replace>45</replace>
+      <replace>BufferedImage</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -125,10 +133,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="441" />
-    <option name="y" value="-19" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -148,6 +156,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pic2ascii" type="1abcf292:AndroidViewProjectNode" />
+              <item name="pic2ascii" type="1039202d:NonAndroidModuleNode" />
+            </path>
+            <path>
+              <item name="pic2ascii" type="1abcf292:AndroidViewProjectNode" />
+              <item name="pic2ascii" type="1039202d:NonAndroidModuleNode" />
+              <item name="java" type="b5c1fe26:NonAndroidSourceTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -158,6 +185,11 @@
             <path>
               <item name="pic2ascii" type="b2602c69:ProjectViewProjectNode" />
               <item name="pic2ascii" type="462c0819:PsiDirectoryNode" />
+              <item name="Android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pic2ascii" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pic2ascii" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -166,14 +198,19 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="pic2ascii" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pic2ascii" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="pic2ascii" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 (1) &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,7 +337,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="com.jmoore.pic2ascii.P2A" />
       <option name="VM_PARAMETERS" value="-Xmx7G" />
-      <option name="PROGRAM_PARAMETERS" value="sample_images/outside1.jpg" />
+      <option name="PROGRAM_PARAMETERS" value="sample_images/outside4.jpg" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -378,7 +415,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -388,12 +424,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44927537" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35897437" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12739871" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -426,10 +462,78 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1629#1656#0" expanded="true" />
-            <element signature="e#2242#2269#0" expanded="true" />
-            <element signature="e#2829#2856#0" expanded="true" />
-            <element signature="e#8182#8209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7420">
+          <caret line="371" column="70" lean-forward="false" selection-start-line="371" selection-start-column="70" selection-end-line="371" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,10 +552,6 @@
           <caret line="273" column="34" lean-forward="true" selection-start-line="273" selection-start-column="34" selection-end-line="273" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1629#1656#0" expanded="true" />
-            <element signature="e#2242#2269#0" expanded="true" />
-            <element signature="e#2829#2856#0" expanded="true" />
-            <element signature="e#8182#8209#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -470,10 +570,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1629#1656#0" expanded="true" />
-            <element signature="e#2242#2269#0" expanded="true" />
-            <element signature="e#2829#2856#0" expanded="true" />
-            <element signature="e#8182#8209#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -481,22 +577,18 @@
     <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Colors.java" />
     <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/Letters.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+        <state relative-caret-position="7420">
+          <caret line="371" column="70" lean-forward="false" selection-start-line="371" selection-start-column="70" selection-end-line="371" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jmoore/pic2ascii/P2A.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="534" column="50" lean-forward="true" selection-start-line="534" selection-start-column="50" selection-end-line="534" selection-end-column="50" />
+        <state relative-caret-position="480">
+          <caret line="473" column="17" lean-forward="false" selection-start-line="473" selection-start-column="17" selection-end-line="473" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1629#1656#0" expanded="true" />
-            <element signature="e#2242#2269#0" expanded="true" />
-            <element signature="e#2829#2856#0" expanded="true" />
-            <element signature="e#8182#8209#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -560,7 +652,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

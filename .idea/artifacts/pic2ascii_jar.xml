@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="pic2ascii:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/pic2ascii_jar</output-path>
+    <output-path>$PROJECT_DIR$/out/artifacts/pic2ascii_jarv2</output-path>
     <root id="archive" name="pic2ascii.jar">
       <element id="module-output" name="pic2ascii" />
     </root>

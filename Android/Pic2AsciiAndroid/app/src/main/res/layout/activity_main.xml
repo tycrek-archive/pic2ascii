@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jmoore.pic2asciiandroid.MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Take Picture"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginRight="7dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/choosePictureB"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:id="@+id/choosePictureB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginLeft="8dp"
+        android:text="Choose Picture"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp" />
+
+
+    <EditText
+        android:id="@+id/abcET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Character"
+        android:inputType="textPersonName"
+        android:text="X"
+        app:layout_constraintTop_toBottomOf="@+id/choosePictureB"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/scaleET"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:ems="10"
+        android:hint="Scale"
+        android:inputType="number"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@+id/abcET"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/confirmB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:text="Confirm"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scaleET" />
+
+</android.support.constraint.ConstraintLayout>

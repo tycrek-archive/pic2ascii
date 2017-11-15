@@ -1,13 +1,13 @@
-package com.jmoore.pic2ascii;
+package com.jmoore.pic2asciiandroid;
 
-import java.awt.Color;
-import java.awt.image.BufferedImage;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
-import javax.imageio.ImageIO;
 
 /**
  * Project: Pic2Ascii - Convert an image to ASCII characters
@@ -16,26 +16,27 @@ import javax.imageio.ImageIO;
 public class P2A {
 
     private File file;
-    private Color[][] scaled; //Contains the colors for each pixel of the scaled image
-    private BufferedImage image = null; //Stores the image
+    private int[][] scaled; //Contains the colors for each pixel of the scaled image
+    private Bitmap image = null; //Stores the image
     private String abc; //The character to display
     private volatile boolean completed = false;
 
     private int width, height; //Width and height of the SCALED image
 
-    private BufferedImage saveImage;
+    private Bitmap saveImage;
     private int[] threadProgress;
     private int cores;
 
     /**
-     * Get an ASCII BufferedImage from a String filename
+     * Get an ASCII Bitmap from a String filename
      * @param filename The filename of the image to convert
      * @param abc The character to represent pixels
      * @param scale What to scale the image by (higher value = smaller result)
-     * @return The converted ASCII BufferedImage
+     * @return The converted ASCII Bitmap
      */
     @SuppressWarnings("unused")
-    public BufferedImage getImage(String filename, String abc, int scale) {
+    public Bitmap getImage(String filename, String abc, int scale) {
+        new Letters().setAll();
         new Timer().start();
         file = new File(filename);
         loadImage();
@@ -45,14 +46,15 @@ public class P2A {
     }
 
     /**
-     * Get an ASCII BufferedImage from a normal BufferedImage
+     * Get an ASCII Bitmap from a normal Bitmap
      * @param file The file of the image to convert
      * @param abc The character to represent pixels
      * @param scale What to scale the image by (higher value = smaller result)
-     * @return The converted ASCII BufferedImage
+     * @return The converted ASCII Bitmap
      */
     @SuppressWarnings("unused")
-    public BufferedImage getImage(File file, String abc, int scale) {
+    public Bitmap getImage(File file, String abc, int scale) {
+        new Letters().setAll();
         new Timer().start();
         this.file = file;
         loadImage();
@@ -62,14 +64,15 @@ public class P2A {
     }
 
     /**
-     * Get an ASCII BufferedImage from a normal BufferedImage
+     * Get an ASCII Bitmap from a normal Bitmap
      * @param image The image to convert
      * @param abc The character to represent pixels
      * @param scale What to scale the image by (higher value = smaller result)
-     * @return The converted ASCII BufferedImage
+     * @return The converted ASCII Bitmap
      */
     @SuppressWarnings("unused")
-    public BufferedImage getImage(BufferedImage image, String abc, int scale) {
+    public Bitmap getImage(Bitmap image, String abc, int scale) {
+        new Letters().setAll();
         new Timer().start();
         this.image = image;
         this.abc = abc;
@@ -92,13 +95,13 @@ public class P2A {
     }
 
     /**
-     * Load the image into a BufferedImage object
+     * Load the image into a Bitmap object
      * @return Whether the image was loaded or not
      */
     private boolean loadImage() {
         System.out.print("Step 1 of 5: Load image... ");
         try {
-            image = ImageIO.read(file); //Read the file into the BufferedImage
+            image = BitmapFactory.decodeFile(file.getAbsolutePath()); //Read the file into the Bitmap
             System.out.println("Completed.");
             return true;
         } catch(Exception ex) {
@@ -143,11 +146,15 @@ public class P2A {
         System.out.print("Step 4 of 5: Scale image... ");
         width = image.getWidth() / scale; //The new width is the original divided by the scale. A higher scale results in a smaller image
         height = image.getHeight() / scale; //The new height is the original divided by the scale. A higher scale results in a smaller image
-        scaled = new Color[width][height]; //The new color values of the scaled image
+        scaled = new int[width][height]; //The new color values of the scaled image
         try {
             for(int x = 0; x < width; x++) { //For each value in the X...
                 for(int y = 0; y < height; y++) { //... and Y of the new array
-                    scaled[x][y] = new Color(image.getRGB(x * scale, y * scale)); //Multiply the current value by the scale so we cover the entire image instead of just a small section
+                    int red = Color.red(image.getPixel(x * scale,y * scale));
+                    int green = Color.green(image.getPixel(x * scale,y * scale));
+                    int blue = Color.blue(image.getPixel(x * scale,y * scale));
+                    scaled[x][y] = Color.rgb(red, green, blue); //Multiply the current value by the scale so we cover the entire image instead of just a small section
+
                 }
             }
             System.out.println("Completed.");
@@ -161,9 +168,9 @@ public class P2A {
     /**
      * Saves the image to a file
      */
-    private BufferedImage saveImage() {
+    private Bitmap saveImage() {
         System.out.println("Step 5 of 5: Save image... ");
-        saveImage = new BufferedImage(width * Letters.width, height * Letters.height, BufferedImage.TYPE_INT_RGB); //Create a new BufferedImage
+        saveImage = Bitmap.createBitmap(width * Letters.width, height * Letters.height, Bitmap.Config.RGB_565); //Create a new Bitmap
         boolean[][] array;
         switch(abc.substring(1)) { //Pick a letter array to use based off the user selected character
             case "A":
@@ -454,8 +461,8 @@ public class P2A {
         }
 
         ArrayList<Thread> threads = new ArrayList<>();
-        //cores = Runtime.getRuntime().availableProcessors();
-        cores = 1;
+        cores = Runtime.getRuntime().availableProcessors();
+        //cores = 1;
         int sectionWidth = width / cores;
         threadProgress = new int[cores];
 
@@ -468,7 +475,7 @@ public class P2A {
             tc.start();
         }
 
-        //System.out.println("Cores: " + cores + ", Threads: " + threads.size());
+        System.out.println("Cores: " + cores + ", Threads: " + threads.size());
 
         for(Thread t : threads) {
             try {
@@ -482,17 +489,17 @@ public class P2A {
             File newFile;
             int count = 0; //If the file already exists, don't overwrite it, just increase the numerical counter
             while(true) { //Loop until the filename does not exist
-                String name = file.getName() + "_ASCII_" + abc.substring(1) + "_" + count + ".jpg"; //Filename that we will check if it exists
+                String name = "ANDROID" + "_ASCII_" + abc.substring(1) + "_" + count + ".jpg"; //Filename that we will check if it exists
                 newFile = new File(name);
                 if(newFile.exists()) count++; //If it does, increase the counter and try again
                 else break; //If not, exit the loop and save the file
             }
-            try {
+            /*try {
                 ImageIO.write(saveImage, "jpg", newFile); //Save the new image to a jpg formatted file
             } catch(Exception ex) {
                 newFile = new File(file.getName() + "_ASCII_" + Integer.toString(ThreadLocalRandom.current().nextInt(1,Integer.MAX_VALUE)) + ".jpg");
                 ImageIO.write(saveImage, "jpg", newFile);
-            }
+            }*/
         } catch(Exception ex) {
             ex.printStackTrace();
             quit();
@@ -518,7 +525,7 @@ public class P2A {
         if(red > 36) red -= 35;
         if(green > 36) green -= 35;
         if(blue > 36) blue -= 35;
-        return new Color(red, green, blue).getRGB();
+        return Color.rgb(red, green, blue);
     }
 
     /**
@@ -555,21 +562,22 @@ public class P2A {
         System.exit(1);
     }
 
-    private void updateProgress() {
+    private void updatePercent() {
         int total = 0;
         for(int i : threadProgress) {
             total += i;
         }
-        System.out.println(Integer.toString(total / cores) + "%");
+        MainActivity.updatePercent(total / cores);
     }
 
     class ThreadedCompute extends Thread {
         int startX, endX, height, threadID;
         boolean[][] array;
-        float total;
-        float progress = 0;
-        int percent = 0;
-        int tempPercent;
+
+        float total; //Total number of pixels
+        float progress = 0; //Current pixel
+        int percent = 0; //Percentage completed
+        int tempPercent; //If this is the same as percent, DO NOT print to the screen so we don't flood the screen with duplicate percentages
 
         ThreadedCompute(int threadID, int startX, int endX, int height, boolean[][] array) {
             this.threadID = threadID;
@@ -584,11 +592,11 @@ public class P2A {
         public void run() {
             for(int x = startX; x < endX; x++) { //For each X...
                 for(int y = 0; y < height; y++) { //... and Y
-                    int background = getBackground(scaled[x][y].getRed(), scaled[x][y].getGreen(), scaled[x][y].getBlue()); //Get a new background color based of the foreground
-                    int[][] col = Letters.getArray(array, scaled[x][y].getRGB(), background); //Get the letter array for the new sections
+                    int background = getBackground(Color.red(scaled[x][y]), Color.green(scaled[x][y]), Color.blue(scaled[x][y])); //Get a new background color based of the foreground
+                    int[][] col = Letters.getArray(array, Color.rgb(Color.red(scaled[x][y]),Color.green(scaled[x][y]),Color.blue(scaled[x][y])), background); //Get the letter array for the new sections
                     for(int a = 0; a < Letters.width; a++) { //For each "width" in the letter array
                         for(int b = 0; b < Letters.height; b++) { //For each "height" in the letter array
-                            saveImage.setRGB((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]); //Tricky maths
+                            saveImage.setPixel((Letters.width * x) + a, (Letters.height * y) + b, col[a][b]); //Tricky maths
                             //Basically, X and Y are the width and height for the scaled image array. For
                             //each SINGLE coordinate, we need to make a new 6x8 section for the new image.
                             //This is done by the setRGB, which takes an X and a Y. We have a second pair
@@ -617,10 +625,9 @@ public class P2A {
                 if(tempPercent != percent) { //As described above, this ensures we don't flood the screen with duplicate percentages
                     percent = (int) fp;
                     threadProgress[threadID] = percent;
-                    updateProgress();
+                    updatePercent();
                 }
             }
-            System.out.println("Thread " + threadID + " has completed.");
         }
     }
 
