@@ -2,11 +2,12 @@
 sample_images/
 
 # Any image formats (remove this line if you want to commit your own images to your own repo)
-*.jpg
-*.jpeg
-*.gif
-*.png
-*.PNG
-*.JPG
-*.JPEG
-*.GIF
+#*.jpg
+#*.jpeg
+#*.gif
+#*.png
+#*.PNG
+#*.JPG
+#*.JPEG
+#*.GIF
+*.psd

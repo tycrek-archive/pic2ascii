@@ -1,104 +1,108 @@
 package com.jmoore.pic2ascii;
 
+/**
+ * Letters: A very long class that does very little
+ * @author Joshua Moore
+ */
 class Letters {
-    
-     static final int width = 6;
-     static final int height = 8;
-     
-     static boolean[][]a = new boolean[width][height];
-     static boolean[][]b = new boolean[width][height];
-     static boolean[][]c = new boolean[width][height];
-     static boolean[][]d = new boolean[width][height];
-     static boolean[][]e = new boolean[width][height];
-     static boolean[][]f = new boolean[width][height];
-     static boolean[][]g = new boolean[width][height];
-     static boolean[][]h = new boolean[width][height];
-     static boolean[][]i = new boolean[width][height];
-     static boolean[][]j = new boolean[width][height];
-     static boolean[][]k = new boolean[width][height];
-     static boolean[][]l = new boolean[width][height];
-     static boolean[][]m = new boolean[width][height];
-     static boolean[][]n = new boolean[width][height];
-     static boolean[][]o = new boolean[width][height];
-     static boolean[][]p = new boolean[width][height];
-     static boolean[][]q = new boolean[width][height];
-     static boolean[][]r = new boolean[width][height];
-     static boolean[][]s = new boolean[width][height];
-     static boolean[][]t = new boolean[width][height];
-     static boolean[][]u = new boolean[width][height];
-     static boolean[][]v = new boolean[width][height];
-     static boolean[][]w = new boolean[width][height];
-     static boolean[][]x = new boolean[width][height];
-     static boolean[][]y = new boolean[width][height];
-     static boolean[][]z = new boolean[width][height];
-     static boolean[][]A = new boolean[width][height];
-     static boolean[][]B = new boolean[width][height];
-     static boolean[][]C = new boolean[width][height];
-     static boolean[][]D = new boolean[width][height];
-     static boolean[][]E = new boolean[width][height];
-     static boolean[][]F = new boolean[width][height];
-     static boolean[][]G = new boolean[width][height];
-     static boolean[][]H = new boolean[width][height];
-     static boolean[][]I = new boolean[width][height];
-     static boolean[][]J = new boolean[width][height];
-     static boolean[][]K = new boolean[width][height];
-     static boolean[][]L = new boolean[width][height];
-     static boolean[][]M = new boolean[width][height];
-     static boolean[][]N = new boolean[width][height];
-     static boolean[][]O = new boolean[width][height];
-     static boolean[][]P = new boolean[width][height];
-     static boolean[][]Q = new boolean[width][height];
-     static boolean[][]R = new boolean[width][height];
-     static boolean[][]S = new boolean[width][height];
-     static boolean[][]T = new boolean[width][height];
-     static boolean[][]U = new boolean[width][height];
-     static boolean[][]V = new boolean[width][height];
-     static boolean[][]W = new boolean[width][height];
-     static boolean[][]X = new boolean[width][height];
-     static boolean[][]Y = new boolean[width][height];
-     static boolean[][]Z = new boolean[width][height];
-     static boolean[][]num_0 = new boolean[width][height];
-     static boolean[][]num_1 = new boolean[width][height];
-     static boolean[][]num_2 = new boolean[width][height];
-     static boolean[][]num_3 = new boolean[width][height];
-     static boolean[][]num_4 = new boolean[width][height];
-     static boolean[][]num_5 = new boolean[width][height];
-     static boolean[][]num_6 = new boolean[width][height];
-     static boolean[][]num_7 = new boolean[width][height];
-     static boolean[][]num_8 = new boolean[width][height];
-     static boolean[][]num_9 = new boolean[width][height];
-     static boolean[][]period = new boolean[width][height];
-     static boolean[][]comma = new boolean[width][height];
-     static boolean[][]doubleQuotes = new boolean[width][height];
-     static boolean[][]singleQuotes = new boolean[width][height];
-     static boolean[][]apostrophe = new boolean[width][height];
-     static boolean[][]questionMark = new boolean[width][height];
-     static boolean[][]exclamationMark = new boolean[width][height];
-     static boolean[][]at = new boolean[width][height];
-     static boolean[][]underscore = new boolean[width][height];
-     static boolean[][]asterisk = new boolean[width][height];
-     static boolean[][]hash = new boolean[width][height];
-     static boolean[][]dollar = new boolean[width][height];
-     static boolean[][]percent = new boolean[width][height];
-     static boolean[][]ampersand = new boolean[width][height];
-     static boolean[][]leftBracket = new boolean[width][height];
-     static boolean[][]rightBracket = new boolean[width][height];
-     static boolean[][]plus = new boolean[width][height];
-     static boolean[][]minus = new boolean[width][height];
-     static boolean[][]forwardSlash = new boolean[width][height];
-     static boolean[][]backwardSlash = new boolean[width][height];
-     static boolean[][]colon = new boolean[width][height];
-     static boolean[][]semiColon = new boolean[width][height];
-     static boolean[][]leftArrow = new boolean[width][height];
-     static boolean[][]rightArrow = new boolean[width][height];
-     static boolean[][]equals = new boolean[width][height];
-     static boolean[][]leftSquareBracket = new boolean[width][height];
-     static boolean[][]rightSquareBracket = new boolean[width][height];
-     static boolean[][]power = new boolean[width][height];
-     static boolean[][]leftBrace = new boolean[width][height];
-     static boolean[][]rightBrace = new boolean[width][height];
-     static boolean[][]pipe = new boolean[width][height];
-     static boolean[][]tilda = new boolean[width][height];
+
+    static final int width = 6;
+    static final int height = 8;
+
+    static boolean[][]a = new boolean[width][height];
+    static boolean[][]b = new boolean[width][height];
+    static boolean[][]c = new boolean[width][height];
+    static boolean[][]d = new boolean[width][height];
+    static boolean[][]e = new boolean[width][height];
+    static boolean[][]f = new boolean[width][height];
+    static boolean[][]g = new boolean[width][height];
+    static boolean[][]h = new boolean[width][height];
+    static boolean[][]i = new boolean[width][height];
+    static boolean[][]j = new boolean[width][height];
+    static boolean[][]k = new boolean[width][height];
+    static boolean[][]l = new boolean[width][height];
+    static boolean[][]m = new boolean[width][height];
+    static boolean[][]n = new boolean[width][height];
+    static boolean[][]o = new boolean[width][height];
+    static boolean[][]p = new boolean[width][height];
+    static boolean[][]q = new boolean[width][height];
+    static boolean[][]r = new boolean[width][height];
+    static boolean[][]s = new boolean[width][height];
+    static boolean[][]t = new boolean[width][height];
+    static boolean[][]u = new boolean[width][height];
+    static boolean[][]v = new boolean[width][height];
+    static boolean[][]w = new boolean[width][height];
+    static boolean[][]x = new boolean[width][height];
+    static boolean[][]y = new boolean[width][height];
+    static boolean[][]z = new boolean[width][height];
+    static boolean[][]A = new boolean[width][height];
+    static boolean[][]B = new boolean[width][height];
+    static boolean[][]C = new boolean[width][height];
+    static boolean[][]D = new boolean[width][height];
+    static boolean[][]E = new boolean[width][height];
+    static boolean[][]F = new boolean[width][height];
+    static boolean[][]G = new boolean[width][height];
+    static boolean[][]H = new boolean[width][height];
+    static boolean[][]I = new boolean[width][height];
+    static boolean[][]J = new boolean[width][height];
+    static boolean[][]K = new boolean[width][height];
+    static boolean[][]L = new boolean[width][height];
+    static boolean[][]M = new boolean[width][height];
+    static boolean[][]N = new boolean[width][height];
+    static boolean[][]O = new boolean[width][height];
+    static boolean[][]P = new boolean[width][height];
+    static boolean[][]Q = new boolean[width][height];
+    static boolean[][]R = new boolean[width][height];
+    static boolean[][]S = new boolean[width][height];
+    static boolean[][]T = new boolean[width][height];
+    static boolean[][]U = new boolean[width][height];
+    static boolean[][]V = new boolean[width][height];
+    static boolean[][]W = new boolean[width][height];
+    static boolean[][]X = new boolean[width][height];
+    static boolean[][]Y = new boolean[width][height];
+    static boolean[][]Z = new boolean[width][height];
+    static boolean[][]num_0 = new boolean[width][height];
+    static boolean[][]num_1 = new boolean[width][height];
+    static boolean[][]num_2 = new boolean[width][height];
+    static boolean[][]num_3 = new boolean[width][height];
+    static boolean[][]num_4 = new boolean[width][height];
+    static boolean[][]num_5 = new boolean[width][height];
+    static boolean[][]num_6 = new boolean[width][height];
+    static boolean[][]num_7 = new boolean[width][height];
+    static boolean[][]num_8 = new boolean[width][height];
+    static boolean[][]num_9 = new boolean[width][height];
+    static boolean[][]period = new boolean[width][height];
+    static boolean[][]comma = new boolean[width][height];
+    static boolean[][]doubleQuotes = new boolean[width][height];
+    static boolean[][]singleQuotes = new boolean[width][height];
+    static boolean[][]apostrophe = new boolean[width][height];
+    static boolean[][]questionMark = new boolean[width][height];
+    static boolean[][]exclamationMark = new boolean[width][height];
+    static boolean[][]at = new boolean[width][height];
+    static boolean[][]underscore = new boolean[width][height];
+    static boolean[][]asterisk = new boolean[width][height];
+    static boolean[][]hash = new boolean[width][height];
+    static boolean[][]dollar = new boolean[width][height];
+    static boolean[][]percent = new boolean[width][height];
+    static boolean[][]ampersand = new boolean[width][height];
+    static boolean[][]leftBracket = new boolean[width][height];
+    static boolean[][]rightBracket = new boolean[width][height];
+    static boolean[][]plus = new boolean[width][height];
+    static boolean[][]minus = new boolean[width][height];
+    static boolean[][]forwardSlash = new boolean[width][height];
+    static boolean[][]backwardSlash = new boolean[width][height];
+    static boolean[][]colon = new boolean[width][height];
+    static boolean[][]semiColon = new boolean[width][height];
+    static boolean[][]leftArrow = new boolean[width][height];
+    static boolean[][]rightArrow = new boolean[width][height];
+    static boolean[][]equals = new boolean[width][height];
+    static boolean[][]leftSquareBracket = new boolean[width][height];
+    static boolean[][]rightSquareBracket = new boolean[width][height];
+    static boolean[][]power = new boolean[width][height];
+    static boolean[][]leftBrace = new boolean[width][height];
+    static boolean[][]rightBrace = new boolean[width][height];
+    static boolean[][]pipe = new boolean[width][height];
+    static boolean[][]tilda = new boolean[width][height];
 
     /**
      * Give a character array with the correct colors
@@ -356,7 +360,7 @@ class Letters {
         Z[0][5] = true; Z[1][5] = false; Z[2][5] = false; Z[3][5] = false; Z[4][5] = false; Z[5][5] = false;
         Z[0][6] = true; Z[1][6] = true; Z[2][6] = true; Z[3][6] = true; Z[4][6] = true; Z[5][6] = false;
         Z[0][7] = false; Z[1][7] = false; Z[2][7] = false; Z[3][7] = false; Z[4][7] = false; Z[5][7] = false;
-        
+
         //a
         a[0][0] = false; a[1][0] = false; a[2][0] = false; a[3][0] = false; a[4][0] = false; a[5][0] = false;
         a[0][1] = false; a[1][1] = false; a[2][1] = false; a[3][1] = false; a[4][1] = false; a[5][1] = false;
@@ -366,7 +370,7 @@ class Letters {
         a[0][5] = true; a[1][5] = false; a[2][5] = false; a[3][5] = false; a[4][5] = true; a[5][5] = false;
         a[0][6] = false; a[1][6] = true; a[2][6] = true; a[3][6] = true; a[4][6] = true; a[5][6] = false;
         a[0][7] = false; a[1][7] = false; a[2][7] = false; a[3][7] = false; a[4][7] = false; a[5][7] = false;
-        
+
         //b
         b[0][0] = true; b[1][0] = false; b[2][0] = false; b[3][0] = false; b[4][0] = false; b[5][0] = false;
         b[0][1] = true; b[1][1] = false; b[2][1] = false; b[3][1] = false; b[4][1] = false; b[5][1] = false;
